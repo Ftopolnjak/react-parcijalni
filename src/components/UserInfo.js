@@ -22,7 +22,9 @@ export default class UserInfo extends Component {
 					{user.location}
 				</p>
 				<strong>REPOSITORIES:</strong>
-				<ul>{repo && repo.map((repo) => <li>{repo.name}</li>)}</ul>
+				<ul>
+					{repo && repo.map((repo) => <li key={repo.id}>{repo.name}</li>)}
+				</ul>
 				<button onClick={() => setUser(null)}>RESET</button>
 			</div>
 		);
